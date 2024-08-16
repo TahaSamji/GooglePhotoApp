@@ -9,6 +9,8 @@ function App() {
   const [isloading, setisLoading] = useState(false);
 
   const handleChange = (e) => {
+   const type =  e.target.files[0].type;
+    if(type !== "image/png" && type !== "image/bmp" &&type !== "image/jpeg" &&type !== "image/webp" && type !== "image/gif"&& type !== "video/mpeg"&& type !== "video/mp4"	&& type !== "image/avif")
     setfile(e.target.files[0]);
   };
 
