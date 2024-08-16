@@ -64,6 +64,10 @@ function App() {
 
   const UploadImage = async () => {
     try {
+      if(!file){
+        window.alert("Please Select an Image");
+        return;
+      }
       setisLoading(true);
       const formData = new FormData();
       formData.append("UploadImage", file);
